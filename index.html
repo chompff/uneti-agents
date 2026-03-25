@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNETI AI Colleagues</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="canvas-slide">
+  <img src="gear.svg" class="gear" alt="" aria-hidden="true">
+
+  <div id="presentation">
+    <div class="slide slide--canvas active" data-slide="0">
+      <div class="slide-content">
+        <img src="logo.svg" class="top-logo" alt="UNETI">
+        <h1 class="slide-title">Vision: AI powered departments</h1>
+      </div>
+      <div class="bottom-controls">
+        <div class="tilt-control">
+          <span class="tilt-label">tilt</span>
+          <input class="tilt-slider" id="tiltSlider" type="range" min="10" max="35" value="35" step="0.5">
+        </div>
+        <div class="tutorial-toggle-control">
+          <span class="tilt-label">tutorial</span>
+          <label class="tutorial-switch">
+            <input type="checkbox" id="tutorialToggle" checked>
+            <span class="tutorial-switch-track"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="three.min.js"></script>
+  <script src="GLTFLoader.js"></script>
+  <script src="SVGLoader.js"></script>
+  <script src="office-scene.js"></script>
+</body>
+</html>

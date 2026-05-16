@@ -7,13 +7,36 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="canvas-slide">
+<body>
+  <div class="pull-panel" id="pullPanel">
+    <div class="pull-panel__nav">
+      <div class="pull-panel__tab" id="pullTab">
+        <img src="logo.svg" class="top-logo" alt="">
+      </div>
+    </div>
+    <div class="pull-panel__body">
+      <div class="slide-grid" id="slideGrid"></div>
+    </div>
+  </div>
   <img src="gear.svg" class="gear" alt="" aria-hidden="true">
 
   <div id="presentation">
-    <div class="slide slide--canvas active" data-slide="0">
+    <div class="slide active" data-slide="0">
       <div class="slide-content">
-        <img src="logo.svg" class="top-logo" alt="UNETI">
+        <p class="slide-subtitle">Meet the AI investment team</p>
+        <h1 class="slide-title">From pitch to portfolio</h1>
+      </div>
+    </div>
+    <div class="slide" data-slide="1"
+         data-char-desc='["Scans earnings calls and flash reports the moment they drop, distilling key signals into actionable briefs.","Orchestrates the full pipeline — from deal sourcing to portfolio monitoring — keeping every agent in sync.","Tracks ownership stakes, dilution scenarios, and fund allocations with real-time precision."]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Your AI-powered analysts</p>
+        <h1 class="slide-title">Meet the team</h1>
+      </div>
+    </div>
+    <div class="slide slide--canvas" data-slide="2">
+      <div class="slide-content">
+        <p class="slide-subtitle">The vision</p>
         <h1 class="slide-title">Vision: AI powered departments</h1>
       </div>
       <div class="bottom-controls">
@@ -30,12 +53,552 @@
         </div>
       </div>
     </div>
+
+    <div class="slide slide--davis-solo" data-slide="3"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Davis – Team lead</p>
+        <h1 class="slide-title">Automated deal intake</h1>
+      </div>
+      <div class="s4-feature-body">
+        <div class="s4-feature-col">
+          <div class="s4-block s4-block--problem">
+            <span class="s4-block-icon">⚠️</span>
+            <div>
+              <h3>Deal intake is manual and inconsistent</h3>
+              <p>Pitch decks land in a shared inbox as PDFs, PowerPoints, or DocSend links. Analysts manually triage, rename, file, and summarize each deck, a process that can take 30+ minutes per deal and is prone to duplication and missed follow-up.</p>
+            </div>
+          </div>
+          <div class="s4-block s4-block--solution">
+            <span class="s4-block-icon">✅</span>
+            <div>
+              <h3>Davis automates the entire intake</h3>
+              <p>Davis monitors the inbox, detects and deduplicates submissions, files to a standardized Google Drive structure, and uses an LLM to generate a concise prescreen brief and fit score. It then routes the deal to the right investment manager, no manual steps required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s4-feature-divider"></div>
+        <div class="s4-feature-col">
+          <h3 class="s4-caps-title">Five agentic capabilities</h3>
+          <ul class="s4-caps">
+            <li>Email inbox monitoring (PDF, PPTX, DocSend)</li>
+            <li>Deduplication by SHA-256 + fuzzy matching</li>
+            <li>Standardized Google Drive filing &amp; naming</li>
+            <li>LLM pre-screening on market, vertical and focus area</li>
+            <li>Sector-based manager assignment &amp; notifications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--davis-solo" data-slide="4"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Davis – Team lead</p>
+        <h1 class="slide-title">Automated deal intake</h1>
+      </div>
+      <div class="s5-body">
+        <div class="s5-pipeline">
+          <div class="s5-step">
+            <div class="s5-chevron">Email monitoring</div>
+            <p class="s5-step-desc">Watches shared inbox and triggers on new emails with attachment or DocSend links</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Deduplication check</div>
+            <p class="s5-step-desc">SHA-256 hash and fuzzy matching on sender, subject, and company name</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Google Drive filing</div>
+            <p class="s5-step-desc">Store files to appropriate deal flow folder with standardized naming</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">LLM prescreening</div>
+            <p class="s5-step-desc">Read &amp; analyze the pitch deck documents and extract key information</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Assign &amp; notify</div>
+            <p class="s5-step-desc">Routes to relevant manager by sector. Sends email and/or Slack notification</p>
+          </div>
+        </div>
+        <div class="s5-scope-row">
+          <div class="s5-scope-card s5-scope--in">
+            <h3><span class="s5-scope-icon s5-scope-icon--in">✓</span>In scope for MVP</h3>
+            <ul>
+              <li>Mailbox monitoring</li>
+              <li>PDF, PPTX and DocSend ingestion</li>
+              <li>SHA-256 deduplication</li>
+              <li>Google Drive filing &amp; naming conventions</li>
+              <li>LLM integration and pre-screening</li>
+              <li>Sector-based manager assignment</li>
+              <li>Notifications via email and/or Slack</li>
+            </ul>
+          </div>
+          <div class="s5-scope-card s5-scope--out">
+            <h3><span class="s5-scope-icon s5-scope-icon--out">✗</span>Out-of-scope</h3>
+            <ul>
+              <li>Work management (e.g. Jira/Monday.com)</li>
+              <li>Folder structure design</li>
+              <li>Deep market and/or founder research</li>
+              <li>Automated outreach / appointment booking</li>
+              <li>External deal sharing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--ripley-solo" data-slide="5"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Ripley – Flash report agent</p>
+        <h1 class="slide-title">Automated monthly reports</h1>
+      </div>
+      <div class="s4-feature-body">
+        <div class="s4-feature-col">
+          <div class="s4-block s4-block--problem">
+            <span class="s4-block-icon">⚠️</span>
+            <div>
+              <h3>Reporting is chased by hand every month</h3>
+              <p>Portfolio managers chase contacts individually, track responses in spreadsheets and manually chase overdue submissions. Incoming reports arrive in inconsistent formats, requiring cleansing before any insights can be drawn. The process drains time every single month.</p>
+            </div>
+          </div>
+          <div class="s4-block s4-block--solution">
+            <span class="s4-block-icon">✅</span>
+            <div>
+              <h3>Ripley closes the loop end-to-end</h3>
+              <p>Ripley distributes standardized templates on day 1 post-close, sends automated day-3 and day-7 reminders, validates incoming data, and transforms completed reports into a polished PDF with charts – routed automatically to reviewers. No manual steps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s4-feature-divider"></div>
+        <div class="s4-feature-col">
+          <h3 class="s4-caps-title">Five agentic capabilities</h3>
+          <ul class="s4-caps">
+            <li>Automated monthly template distribution</li>
+            <li>Day-3 and day-7 escalation reminders</li>
+            <li>Field-by-field data validation on intake</li>
+            <li>PDF report: North-star KPIs, financials and key changes</li>
+            <li>Aggregated portfolio view across individual flash reports</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--ripley-solo" data-slide="6"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Ripley – Flash report agent</p>
+        <h1 class="slide-title">Automated monthly reports</h1>
+      </div>
+      <div class="s5-body">
+        <div class="s5-pipeline">
+          <div class="s5-step">
+            <div class="s5-chevron">Template dispatch</div>
+            <p class="s5-step-desc">Day 1 post-close: sends personalized template email with prior-period data pre-filled.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Day-3 reminder</div>
+            <p class="s5-step-desc">Courtesy nudge to non-respondents. Overdue tracker updated in the interface.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Day-7 escalation</div>
+            <p class="s5-step-desc">Urgent reminder sent. Responsible portfolio manager flagged for outstanding submissions.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Intake &amp; validation</div>
+            <p class="s5-step-desc">Parses submitted template. Flags missing or out-of-range values before proceeding.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Build &amp; share PDF report</div>
+            <p class="s5-step-desc">Renders visualized PDF. Routes to portfolio manager via email and Slack.</p>
+          </div>
+        </div>
+        <div class="s5-scope-row">
+          <div class="s5-scope-card s5-scope--in">
+            <h3><span class="s5-scope-icon s5-scope-icon--in">✓</span>In scope for MVP</h3>
+            <ul>
+              <li>Contacts management</li>
+              <li>Template email distribution</li>
+              <li>Day-3 &amp; day-7 automated reminders</li>
+              <li>Template parsing &amp; validation</li>
+              <li>PDF generation &amp; data visualization</li>
+              <li>Distribute completed reports</li>
+              <li>Google Drive archival</li>
+              <li>Overdue tracker interface</li>
+            </ul>
+          </div>
+          <div class="s5-scope-card s5-scope--out">
+            <h3><span class="s5-scope-icon s5-scope-icon--out">✗</span>Out-of-scope</h3>
+            <ul>
+              <li>Accounting system integration</li>
+              <li>Template customization</li>
+              <li>Budgeting &amp; forecasting</li>
+              <li>Anomaly detection</li>
+              <li>Interactive dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--morgan-solo" data-slide="7"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Morgan – Cap table agent</p>
+        <h1 class="slide-title">Automated cap tables</h1>
+      </div>
+      <div class="s4-feature-body">
+        <div class="s4-feature-col">
+          <div class="s4-block s4-block--problem">
+            <span class="s4-block-icon">⚠️</span>
+            <div>
+              <h3>Cap tables are built manually from scattered documents</h3>
+              <p>SAFE notes, CLAs, equity issuances, and option pool schedules sit in separate Drive folders. Building and maintaining a fully diluted cap table means reading each document, interpreting conversion terms, and reconciling holders manually – a high-effort, error-prone process with real LP and board risk.</p>
+            </div>
+          </div>
+          <div class="s4-block s4-block--solution">
+            <span class="s4-block-icon">✅</span>
+            <div>
+              <h3>Morgan reads, interprets, and normalizes automatically</h3>
+              <p>Morgan ingests cap documents from Google Drive, classifies each instrument, extracts holder and term data using an LLM, and applies standard conversion formulas to produce a fully diluted cap table. Ambiguous clauses are flagged for human review before the table is finalized.</p>
+            </div>
+          </div>
+        </div>
+        <div class="s4-feature-divider"></div>
+        <div class="s4-feature-col">
+          <h3 class="s4-caps-title">Five agentic capabilities</h3>
+          <ul class="s4-caps">
+            <li>Ingest SAFEs, CLAs, equity docs, option pool</li>
+            <li>LLM extraction of holders, terms and instruments</li>
+            <li>Calculate fully diluted ownership % computation</li>
+            <li>Flag ambiguity in documents and/or clauses</li>
+            <li>Export to Excel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--morgan-solo" data-slide="8"
+         data-char-desc='["","",""]'>
+      <div class="slide-content">
+        <p class="slide-subtitle">Morgan – Cap table agent</p>
+        <h1 class="slide-title">Automated cap tables</h1>
+      </div>
+      <div class="s5-body">
+        <div class="s5-pipeline">
+          <div class="s5-step">
+            <div class="s5-chevron">Drive ingest</div>
+            <p class="s5-step-desc">Monitors Drive folder. Triggers on new PDF or DOCX: term sheets, SAFEs, CLAs, equity docs.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Classify &amp; extract</div>
+            <p class="s5-step-desc">LLM classifies document type and extracts holder names, instrument terms, and amounts.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Normalize dilution</div>
+            <p class="s5-step-desc">Applies standard formulas for SAFEs, CLAs, and option pool to compute fully diluted %.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Flag and review</div>
+            <p class="s5-step-desc">Flag ambiguity in clauses and/or documents. Human review of results.</p>
+          </div>
+          <div class="s5-step">
+            <div class="s5-chevron">Export &amp; archive</div>
+            <p class="s5-step-desc">Output color-coded Excel with normalized cap table and remarks. Stored on Drive</p>
+          </div>
+        </div>
+        <div class="s5-scope-row">
+          <div class="s5-scope-card s5-scope--in">
+            <h3><span class="s5-scope-icon s5-scope-icon--in">✓</span>In scope for MVP</h3>
+            <ul>
+              <li>Google Drive folder monitoring</li>
+              <li>PDF &amp; Docx text extraction</li>
+              <li>Parsing of SAFEs, CLA, Option Pool, Equity tables</li>
+              <li>Fully diluted share calculation</li>
+              <li>Ownership percentage table</li>
+              <li>XLSX export</li>
+              <li>Ambiguity flagging</li>
+            </ul>
+          </div>
+          <div class="s5-scope-card s5-scope--out">
+            <h3><span class="s5-scope-icon s5-scope-icon--out">✗</span>Out-of-scope</h3>
+            <ul>
+              <li>Historical cap table records</li>
+              <li>Tax optimization modeling</li>
+              <li>Integrations with systems beyond Google Drive</li>
+              <li>Multi-jurisdiction legal interpretation</li>
+              <li>(Automatic) reach out for legal documents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--no-chars slide--techstack" data-slide="9">
+      <div class="slide-content">
+        <p class="slide-subtitle">Google-native &amp; TypeScript-first</p>
+        <h1 class="slide-title">AI-ready tech stack</h1>
+      </div>
+      <div class="ts-body">
+        <!-- APPLICATION -->
+        <div class="ts-row" style="--row-color: #2398B2">
+          <div class="ts-row-label">App Layer</div>
+          <div class="ts-cards">
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #61DAFB">⚛</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Frontend</span>
+                <strong>Next.js + React</strong>
+                <small>App router · SSR · TypeScript</small>
+              </div>
+            </div>
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #E0234E">⬡</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Backend</span>
+                <strong>NestJS · TypeScript</strong>
+                <small>REST + WebSocket · modular · typed DI</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AI LAYER -->
+        <div class="ts-row" style="--row-color: #F59E0B">
+          <div class="ts-row-label">AI Layer</div>
+          <div class="ts-cards">
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #4285F4">🤖</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Agent Framework</span>
+                <strong>Google ADK / GenKit</strong>
+                <small>Agent orchestration · tool-use · streaming</small>
+              </div>
+            </div>
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #D4A017">🧠</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">LLM</span>
+                <strong>Gemini Pro/Flash · Claude 4.6</strong>
+                <small>Reasoning · extraction · structured output</small>
+              </div>
+            </div>
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #2DB1A1">🔍</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">RAG / Vector DB</span>
+                <strong>Qdrant · Weaviate</strong>
+                <small>Semantic search · embeddings · hybrid retrieval</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DATA & AUTH -->
+        <div class="ts-row" style="--row-color: #F97316">
+          <div class="ts-row-label">Data &amp; Auth</div>
+          <div class="ts-cards">
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #F97316">🗄</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Database</span>
+                <strong>Firestore · PostgreSQL</strong>
+                <small>Docs + relational · ACID · real-time sync</small>
+              </div>
+            </div>
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #F4A726">📄</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">File Store</span>
+                <strong>Firebase Storage</strong>
+                <small>Deck &amp; document blobs · CDN delivery</small>
+              </div>
+            </div>
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #34A853">🔒</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Auth</span>
+                <strong>Firebase Auth</strong>
+                <small>Google Login · JWT · role-based access</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- INFRA -->
+        <div class="ts-row" style="--row-color: #4285F4">
+          <div class="ts-row-label">Infra</div>
+          <div class="ts-cards">
+            <div class="ts-card">
+              <div class="ts-icon" style="background: #4285F4">☁</div>
+              <div class="ts-card-text">
+                <span class="ts-tag">Hosting</span>
+                <strong>Google Cloud</strong>
+                <small>Cloud Run · GKE · managed infra · CI/CD</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--no-chars slide--timeline" data-slide="10">
+      <div class="slide-content">
+        <p class="slide-subtitle">Proposal</p>
+        <h1 class="slide-title">Timeline</h1>
+      </div>
+      <div class="tl-body">
+        <div class="tl-track">
+          <div class="tl-line"></div>
+          <div class="tl-milestone" style="--pos: 0%">
+            <div class="tl-dot"></div>
+            <div class="tl-card tl-card--above">
+              <span class="tl-date">March 4</span>
+              <strong class="tl-name">Go / No-go</strong>
+            </div>
+          </div>
+          <div class="tl-phase" style="--from: 0%; --to: 25%">
+            <span class="tl-phase-label">Transition</span>
+          </div>
+          <div class="tl-milestone" style="--pos: 25%">
+            <div class="tl-dot"></div>
+            <div class="tl-card tl-card--below">
+              <span class="tl-date">April 1</span>
+              <strong class="tl-name">Ramp up</strong>
+            </div>
+          </div>
+          <div class="tl-phase" style="--from: 25%; --to: 50%">
+            <span class="tl-phase-label">Build MVP</span>
+          </div>
+          <div class="tl-milestone" style="--pos: 50%">
+            <div class="tl-dot"></div>
+            <div class="tl-card tl-card--above">
+              <span class="tl-date">1 May</span>
+              <strong class="tl-name">Spin off</strong>
+            </div>
+          </div>
+          <div class="tl-phase" style="--from: 50%; --to: 100%">
+            <span class="tl-phase-label">Scale</span>
+          </div>
+          <div class="tl-milestone" style="--pos: 100%">
+            <div class="tl-dot"></div>
+            <div class="tl-card tl-card--below">
+              <span class="tl-date">Nov 2027</span>
+              <strong class="tl-name">Break even</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--no-chars" data-slide="11">
+      <div class="slide-content">
+        <p class="slide-subtitle">Proposal</p>
+        <h1 class="slide-title">Deal terms</h1>
+      </div>
+      <div class="deal-terms-body">
+        <div class="deal-terms-grid">
+          <div class="deal-term-card deal-term--highlight">
+            <span class="deal-term-icon">&#9670;</span>
+            <div>
+              <h3 class="deal-term-title">&euro;2.5M pre-money valuation</h3>
+            </div>
+          </div>
+          <div class="deal-term-card deal-term--highlight deal-term--expandable">
+            <span class="deal-term-icon">&#9670;</span>
+            <div class="deal-term-content">
+              <div class="deal-term-header">
+                <div>
+                  <h3 class="deal-term-title">&euro;500K for 20% equity</h3>
+                  <p class="deal-term-sub">Single tranche, upfront</p>
+                </div>
+                <span class="deal-term-chevron"></span>
+              </div>
+              <div class="deal-term-expand">
+                <div class="deal-term-expand-inner">
+                  <ul class="deal-term-bullets">
+                    <li>Salaries founders &amp; colleagues</li>
+                    <li>Fees from external experts</li>
+                    <li>Tooling</li>
+                    <li>Rent campus</li>
+                    <li>Travel &amp; representation costs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Roberto &amp; Wouter: 40 / 40</h3>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Maikel: advisory role</h3>
+              <p class="deal-term-sub">Quarterly reports</p>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Separate service agreement</h3>
+              <p class="deal-term-sub">Bot builds and maintenance</p>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Full operational &amp; tech mandate</h3>
+              <p class="deal-term-sub">For founding team</p>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Pro-rata rights on future rounds</h3>
+            </div>
+          </div>
+          <div class="deal-term-card">
+            <span class="deal-term-icon">&#9673;</span>
+            <div>
+              <h3 class="deal-term-title">Standard drag-along / tag-along</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="characters" id="characters">
+    <div class="character" data-char="0">
+      <p class="char-name">Ripley</p>
+      <p class="char-role">Flash report chaser</p>
+      <div class="char-video-placeholder has-video">
+        <p class="char-desc"></p>
+        <img class="v-portrait" src="Bot%20Videos/Ripley%20Portrait.jpg" alt="">
+        <video class="v-entry" src="Bot%20Videos/Ripley%20Entry.mp4" muted autoplay playsinline preload="auto"></video>
+        <video class="v-hover" src="Bot%20Videos/Ripley%20Mouseover.mp4" muted playsinline preload="auto"></video>
+      </div>
+    </div>
+    <div class="character character--lead" data-char="1">
+      <p class="char-name">Davis</p>
+      <p class="char-role">Team lead</p>
+      <div class="char-video-placeholder has-video">
+        <p class="char-desc"></p>
+        <img class="v-portrait" src="Bot%20Videos/Davis%20Portrait.jpg" alt="">
+        <video class="v-entry" src="Bot%20Videos/Davis%20Entry.mp4" muted autoplay playsinline preload="auto"></video>
+        <video class="v-hover" src="Bot%20Videos/Davis%20Mouseover.mp4" muted playsinline preload="auto"></video>
+      </div>
+    </div>
+    <div class="character" data-char="2">
+      <p class="char-name">Morgan</p>
+      <p class="char-role">Cap table manager</p>
+      <div class="char-video-placeholder has-video">
+        <p class="char-desc"></p>
+        <img class="v-portrait" src="Bot%20Videos/Morgan%20Portrait.jpg" alt="">
+        <video class="v-entry" src="Bot%20Videos/Entry.mp4" muted autoplay playsinline preload="auto"></video>
+        <video class="v-hover" src="Bot%20Videos/Morgan%20Mouseover.mp4" muted playsinline preload="auto"></video>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="three.min.js"></script>
   <script src="GLTFLoader.js"></script>
   <script src="SVGLoader.js"></script>
   <script src="office-scene.js"></script>
+  <script src="presentation.js"></script>
 </body>
 </html>
